@@ -256,6 +256,24 @@ const SkillSwapPro = () => {
           <button className="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-700 transition">
             Jetzt upgraden
           </button>
+          <button 
+  onClick={() => {
+    if (title === "Pro") {
+      window.open('https://buy.stripe.com/test_cNi3cwe2O68hcnDc4DaZi00', '_blank');
+    } else if (title === "Business") {
+      window.open('https://buy.stripe.com/test_5kQeVe7EqfIRdrHb0zaZi01', '_blank');
+    }
+  }}
+  className={`w-full py-3 rounded-lg font-semibold transition ${
+    active 
+      ? 'bg-gray-200 text-gray-600 cursor-default'
+      : popular
+        ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90'
+        : 'bg-gray-800 text-white hover:bg-gray-700'
+  }`}
+>
+  {cta}
+</button>
         </div>
       )}
     </div>

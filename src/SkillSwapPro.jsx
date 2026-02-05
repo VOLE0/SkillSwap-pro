@@ -253,27 +253,12 @@ const SkillSwapPro = () => {
             <Lock className="w-5 h-5 text-amber-600" />
             <span className="text-sm text-amber-900">Upgrade auf <strong>Pro</strong> für unbegrenzte Swaps</span>
           </div>
-          <button className="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-700 transition">
+          <button 
+            onClick={() => window.open('https://buy.stripe.com/test/cN3cwe2O68hcnDc4D', '_blank')}
+            className="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-amber-700 transition"
+          >
             Jetzt upgraden
           </button>
-          <button 
-  onClick={() => {
-    if (title === "Pro") {
-      window.open('https://buy.stripe.com/test_cNi3cwe2O68hcnDc4DaZi00', '_blank');
-    } else if (title === "Business") {
-      window.open('https://buy.stripe.com/test_5kQeVe7EqfIRdrHb0zaZi01', '_blank');
-    }
-  }}
-  className={`w-full py-3 rounded-lg font-semibold transition ${
-    active 
-      ? 'bg-gray-200 text-gray-600 cursor-default'
-      : popular
-        ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90'
-        : 'bg-gray-800 text-white hover:bg-gray-700'
-  }`}
->
-  {cta}
-</button>
         </div>
       )}
     </div>
@@ -418,12 +403,20 @@ const SkillSwapPro = () => {
         ))}
       </ul>
       <button 
+        onClick={() => {
+          if (title === "Pro") {
+            window.open('https://buy.stripe.com/test/cN3cwe2O68hcnDc4D', '_blank');
+          } else if (title === "Business") {
+            window.open('https://buy.stripe.com/test/5kQeVe7EqfIRdrHb0z', '_blank');
+          }
+        }}
+        disabled={active}
         className={`w-full py-3 rounded-lg font-semibold transition ${
           active 
-            ? 'bg-gray-200 text-gray-600 cursor-default'
+            ? 'bg-gray-200 text-gray-600 cursor-not-allowed'
             : popular
-              ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90'
-              : 'bg-gray-800 text-white hover:bg-gray-700'
+              ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90 cursor-pointer'
+              : 'bg-gray-800 text-white hover:bg-gray-700 cursor-pointer'
         }`}
       >
         {cta}

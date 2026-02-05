@@ -1,14 +1,7 @@
 {
   "name": "skillswap-pro",
   "version": "1.0.0",
-  "description": "KI-gestützte Freelancer-Weiterbildungsplattform für maximales Einkommenswachstum",
-  "main": "skillswap-pro.jsx",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "private": true,
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,26 +9,27 @@
     "recharts": "^2.10.3",
     "lucide-react": "^0.294.0"
   },
-  "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "keywords": [
-    "freelance",
-    "upskilling",
-    "AI",
-    "education",
-    "ROI-tracking",
-    "skill-development"
-  ],
-  "author": "SkillSwap Pro Team",
-  "license": "PROPRIETARY",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/skillswap-pro/app"
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
   },
-  "bugs": {
-    "url": "https://github.com/skillswap-pro/app/issues"
-  },
-  "homepage": "https://skillswap.pro"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

@@ -1,7 +1,12 @@
-import SkillSwapPro from './skillswap-pro';
+import React from 'react';
+import SkillSwapPro from './SkillSwapPro';
 
 function App() {
-  return <SkillSwapPro />;
+  return (
+    <div className="App">
+      <SkillSwapPro />
+    </div>
+  );
 }
 
 export default App;
